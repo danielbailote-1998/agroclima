@@ -20,7 +20,7 @@
             <div class="row g-2 mb-3">
               <div class="col-6 col-md-3">
                 <div class="about-stat">
-                  <div class="about-stat-value">7</div>
+                  <div class="about-stat-value">5</div>
                   <div class="about-stat-label">Culturas</div>
                 </div>
               </div>

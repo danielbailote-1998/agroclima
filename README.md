@@ -1,38 +1,237 @@
-# frontend
+# AgroClima 🌦️🌱
 
-This template should help get you started developing with Vue 3 in Vite.
+AgroClima is a modern agricultural weather monitoring platform built with Vue 3 and Vite.
+The application integrates official IPMA meteorological data and transforms it into useful climate insights and agricultural recommendations for farmers and rural activities in Portugal.
 
-## Recommended IDE Setup
+The platform combines real-time weather observations, forecasts, official weather warnings, and crop-based agricultural intelligence in a responsive and user-friendly dashboard.
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+---
 
-## Recommended Browser Setup
+# Features
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+## 🌤️ Real-Time Weather Monitoring
 
-## Customize configuration
+* Current weather conditions by district
+* Temperature monitoring
+* Wind intensity and direction
+* Atmospheric pressure
+* Humidity monitoring
+* Accumulated precipitation
+* Nearest weather station detection
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## 📅 Daily Forecasts
 
-## Project Setup
+* Multi-day forecast system
+* Minimum and maximum temperatures
+* Probability of precipitation
+* Wind classification
+* Dynamic district selection
 
-```sh
+## ⚠️ Official IPMA Warning System
+
+The application displays official IPMA weather alerts:
+
+* Thunderstorms
+* Heavy rain
+* Strong wind
+* Heat waves
+* Cold weather
+* Fog
+* Snow
+* Maritime agitation
+
+Warning severity levels:
+
+* 🟡 Yellow
+* 🟠 Orange
+* 🔴 Red
+
+Warnings are automatically filtered by district.
+
+---
+
+# 🌱 Agricultural Intelligence
+
+AgroClima includes a crop monitoring system capable of generating agricultural recommendations based on meteorological conditions.
+
+The system evaluates:
+
+* High temperatures
+* Frost conditions
+* Rain probability
+* Humidity levels
+* Wind intensity
+* Official weather warnings
+
+## Smart Agricultural Alerts
+
+Examples of generated alerts:
+
+* Avoid spraying during strong wind
+* Irrigation monitoring recommendations
+* Heat stress warnings
+* Frost risk alerts
+* Fungus development risk
+* Natural irrigation opportunities
+
+---
+
+# Project Structure
+
+```text id="1vr68o"
+src/
+ ├── components/
+ │    ├── AboutCard.vue
+ │    ├── CropCard.vue
+ │    ├── InfoCards.vue
+ │    └── WeatherCard.vue
+ │
+ ├── services/
+ │    ├── agricultureRules.js
+ │    ├── api.js
+ │    └── weatherUtils.js
+ │
+ ├── App.vue
+ └── main.js
+```
+
+---
+
+# Main Components
+
+## WeatherCard.vue
+
+Responsible for:
+
+* District selection
+* Weather observations
+* Daily forecasts
+* Active IPMA warnings
+* Weather data visualization
+
+## CropCard.vue
+
+Handles agricultural monitoring:
+
+* Crop selection
+* Agricultural alerts
+* Weather-based recommendations
+* Climate risk analysis
+
+## InfoCards.vue
+
+Displays summarized climate indicators:
+
+* Temperature indicators
+* Rain probability
+* Wind intensity
+* Humidity analysis
+
+## AboutCard.vue
+
+Provides general information about the platform and project purpose.
+
+---
+
+# Services
+
+## api.js
+
+Handles all API communication:
+
+* Weather forecasts
+* Current observations
+* Warnings
+* Meteorological stations
+* District metadata
+
+## weatherUtils.js
+
+Contains weather helper utilities:
+
+* Warning filtering
+* Nearest station calculation
+* Data formatting
+
+## agricultureRules.js
+
+Contains agricultural intelligence rules and crop-specific logic used to generate alerts and recommendations dynamically.
+
+---
+
+# Tech Stack
+
+* Vue 3
+* Vite
+* Bootstrap 5
+* JavaScript (ES6)
+* IPMA API
+
+---
+
+# Installation
+
+Clone the repository:
+
+```bash id="jwk0so"
+git clone https://github.com/danielbailote-1998/agroclima.git
+```
+
+Enter the project folder:
+
+```bash id="q2a4ik"
+cd agroclima
+```
+
+Install dependencies:
+
+```bash id="pq2ysf"
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+Run the development server:
 
-```sh
+```bash id="b4b7f2"
 npm run dev
 ```
 
-### Compile and Minify for Production
+---
 
-```sh
+# Production Build
+
+```bash id="f3v18g"
 npm run build
 ```
+
+---
+
+# Deploy to GitHub Pages
+
+```bash id="pukggo"
+npm run deploy
+```
+
+---
+
+# Future Improvements
+
+* 🗺️ Interactive weather maps
+* 📊 Historical weather analytics
+* 🌱 Crop growth analysis
+* 🔔 Real-time push notifications
+* 📱 Progressive Web App (PWA)
+* 🌍 Multi-language support
+* 📡 Live weather updates
+
+---
+
+# Author
+
+Developed by Daniel Bailote.
+
+GitHub:
+
+https://github.com/danielbailote-1998
+
+---
+
